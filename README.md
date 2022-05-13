@@ -1,2 +1,1 @@
-# taller-java-devops
-Taller de java y jenkins
+# Taller de java y devops con jenkins
