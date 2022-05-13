@@ -11,10 +11,11 @@
 	<groupId>com.ejemplo</groupId>
 	<artifactId>java-devops</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
 	<name>java-devops</name>
 	<description>Hola Mundo con Java y Jenkins</description>
 	<properties>
-		<java.version>1.8</java.version>
+		<java.version>1.11</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
