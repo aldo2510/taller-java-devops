@@ -11,10 +11,17 @@ node {
   withEnv(['AZURE_SUBSCRIPTION_ID=c36066bf-9ecf-4d40-a364-61048b396ec3',
         'AZURE_TENANT_ID=fddc4031-8d49-4a77-805a-3fcc360c82bc']) {
     stage('init') {
+             agent {
+                docker {
+                    image 'maven:3.8.1-adoptopenjdk-11'
+                    args '-v /tmp/.m2:/root/.m2'
+                }
+            } 
       checkout scm
     }
   
     stage('build') {
+      
       sh 'mvn clean package'
     }
   
